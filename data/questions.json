@@ -1,0 +1,212 @@
+{
+  "q_001": {
+    "id": "q_001",
+    "question": "Masz zdjecie JPG z kompletnie wyzerowanym EXIFem. Jak ustalic, czy bylo obrabiane w Lightroomie czy w GIMP-ie, majac tylko ten jeden plik? Wymien co najmniej 3 techniki.",
+    "specialty": "osint",
+    "criteria": [
+      "Wspomni o analizie maker notes w EXIF",
+      "Wspomni o JPEG ghosts / quality estimators",
+      "Nie polega wylacznie na polu software w EXIF",
+      "Zaproponuje wiecej niz jedna metode"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Maker notes analysis, JPEG quality estimation, ghost artifacts, color profile hints",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_002": {
+    "id": "q_002",
+    "question": "Masz logi aktywnosci uzytkownikow na kanale Telegram (1000 wiadomości). Jak wykryc, czy czesc wiadomosci jest postowana przez bota, nie majac dostepu do API? Opisz metodyke krok po kroku.",
+    "specialty": "osint",
+    "criteria": [
+      "Wspomni o analizie interwalow czasowych",
+      "Wspomni o regularnosci wzorca postingowego",
+      "Zaproponuje analize jezyka/leksykonu",
+      "Nie polega wylacznie na metadanych technicznych"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Time clustering, lexicostatistics, metadata consistency, behavioral fingerprinting",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_003": {
+    "id": "q_003",
+    "question": "Masz liste 50 adresow email. Jak ustalic, ktore naleza do tej samej osoby, nie wysylajac zadnej wiadomosci? Opisz techniki korelacji.",
+    "specialty": "osint",
+    "criteria": [
+      "Wspomni o Gravatar / avatar hash",
+      "Wspomni o HaveIBeenPwned / breach correlation",
+      "Wspomni o reuse username na roznych platformach",
+      "Zachowa legalnosc (nie phishing)"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Gravatar MD5, breach DBs, username reuse, PGP keyservers, social media fingerprinting",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_004": {
+    "id": "q_004",
+    "question": "Masz plik CSV z 100k rekordow sprzedazy. Jedna kolumna to 'revenue' i masz 5 outlierow >3 sigma. Opisz procedure: jak zdecydowac, czy to blad, czy realne duze zamowienie? Podaj konkretne testy.",
+    "specialty": "data_analysis",
+    "criteria": [
+      "Rozroznia detekcje anomalii od czyszczenia danych",
+      "Wspomni o IQR / modified Z-score",
+      "Zaproponuje sprawdzenie source data (oryginal zamowienia)",
+      "Nie usuwa outlierow bez analizy przyczyny"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Modified Z-score, IQR, source verification, business context, never blind-removal",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_005": {
+    "id": "q_005",
+    "question": "Dwie kampanie marketingowe A i B mialy odpowiednio 3% i 3.5% CTR. Roznica jest statystycznie istotna? Jakie pytania musisz zadac, zanim podasz odpowiedz?",
+    "specialty": "data_analysis",
+    "criteria": [
+      "Wspomni o wielkosci proby (N)",
+      "Wspomni o confidence interval",
+      "Rozroznia practical vs statistical significance",
+      "Zada pytanie o baseline / seasonality"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Need N, CI, multiple testing correction, practical significance vs statistical",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_006": {
+    "id": "q_006",
+    "question": "Masz dwie time series: aktywnosc na forum i aktywnosc na Twitterze tej samej osoby. Korelacja Pearson = 0.85. Czy to znaczy, ze Twitter powoduje aktywnosc na forum? Wytlumacz.",
+    "specialty": "data_analysis",
+    "criteria": [
+      "Cytuje 'correlation != causation'",
+      "Wspomni o common cause / confounder",
+      "Zaproponuje lag analysis / Granger",
+      "Nie ufa samej korelacji Pearson"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Confounding, lag analysis, Granger causality, spurious correlation",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_007": {
+    "id": "q_007",
+    "question": "Artykul twierdzi: 'Osoby pijace czerwone wino zyja dluzszej. Wino wydluza zycie.' Wypunktuj co najmniej 4 alternatywne wyjasnienia, ktore podwazaja ten wniosek.",
+    "specialty": "critical_thinking",
+    "criteria": [
+      "Wspomni o confounder (dochod, styl zycia)",
+      "Wspomni o selection bias",
+      "Wspomni o reverse causation",
+      "Zaproponuje wiecej niz 3 alternatywy"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Confounding (income, diet, exercise), selection bias, reverse causation, publication bias",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_008": {
+    "id": "q_008",
+    "question": "Badacz podal wynik 'p < 0.05 wiec skuteczne'. Wymien co najmniej 4 problemy z tym wnioskiem, nie wdajac sie w szczegoly konkretnego badania.",
+    "specialty": "critical_thinking",
+    "criteria": [
+      "Wspomni o problemie multiple testing",
+      "Wspomni o effect size vs significance",
+      "Wspomni o p-hacking",
+      "Wspomni o reproducibility crisis"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Multiple testing, effect size, p-hacking, preregistration, reproducibility",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_009": {
+    "id": "q_009",
+    "question": "Ktos mowi: 'Mam 99% accuracy na moim modelu detekcji fraudow, wiec model jest dobry.' Wymien co najmniej 3 powody, dla ktorych to nie musi byc prawda.",
+    "specialty": "critical_thinking",
+    "criteria": [
+      "Wspomni o class imbalance",
+      "Wspomni o precision/recall tradeoff",
+      "Wspomni o data leakage",
+      "Nie ufa accuracy jako jedynej metryce"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Imbalanced classes, precision/recall, F1, ROC-AUC, data leakage, base rate fallacy",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_010": {
+    "id": "q_010",
+    "question": "Przeczytales 3 raporty techniczne o tym samym incydencie bezpieczenstwa. Kazdy mowi co innego. Opisz procedure, jak zbudowac z nich jedna koherentna relacje bez utraty informacji.",
+    "specialty": "synthesis",
+    "criteria": [
+      "Zaproponuje matrix: fakty vs zrodla",
+      "Rozroznia fakty od interpretacji",
+      "Wspomni o waznosci zrodel (primary vs secondary)",
+      "Zaproponuje timeline jako narzedzie"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Fact-source matrix, primary vs secondary sources, timeline, uncertainty labeling",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_011": {
+    "id": "q_011",
+    "question": "Masz 100stronicowy raport techniczny po angielsku. Twoj szef chce 1-akapitowe podsumowanie w jezyku polskim. Opisz procedure: jak zdecydowac, co wylaczyc, a co zostawic.",
+    "specialty": "synthesis",
+    "criteria": [
+      "Wspomni o hierarchii informacji (pyramid principle)",
+      "Rozroznia wnioski od danych",
+      "Wspomni o audience-aware communication",
+      "Nie polega wylacznie na extractive summarization"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Pyramid principle, audience analysis, abstractive summary, key findings first",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_012": {
+    "id": "q_012",
+    "question": "Opisz sytuacje, w ktorej trzeba przedstawic kontrowersyjny wniosek grupie interesariuszy o sprzecznych interesach. Jak strukturyzujesz argumenty?",
+    "specialty": "synthesis",
+    "criteria": [
+      "Wspomni o steelmanning przeciwnych stron",
+      "Zaproponuje strukture: dane -> wnioski -> rekomendacje",
+      "Wspomni o eksplisitnym uncertainty",
+      "Unika emotional appeal"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Steelmanning, fact-recommendation structure, uncertainty labeling, stakeholder-aware framing",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_013": {
+    "id": "q_013",
+    "question": "Wymysl nietypowy sposob na wykrycie botow na Telegramie, ktory NIE opiera sie na analizie tekstu ani metadanych technicznych. Moze byc absurdalny, ale musi miec rationale.",
+    "specialty": "creative",
+    "criteria": [
+      "Rozwiazuje problem nietypowym kanalem",
+      "Ma racjonalne uzasadnienie",
+      "Nie powtarza standardowych technik",
+      "Pokazuje lateral thinking"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Behavioral fingerprinting through unusual signals: emoji reactions timing, reply patterns to specific message types, etc.",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_014": {
+    "id": "q_014",
+    "question": "Jakby wygladalo 'muzeum zapomnianego internetu'? Wymysl koncepcje, ktora nie jest zwykla archiwizacja, ale mialaby realna wartosc dla badaczy.",
+    "specialty": "creative",
+    "criteria": [
+      "Nie jest zwykla kopia archive.org",
+      "Ma oryginalna koncepcje kuratorska",
+      "Adresuje konkretne potrzeby badawcze",
+      "Pokazuje myslenie poza schematem"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Curated dead-web exhibitions, contextual preservation, link-graph forensics, lost-design archive",
+    "created": "2026-07-18T00:00:00+00:00"
+  },
+  "q_015": {
+    "id": "q_015",
+    "question": "Wymysl gre, ktora uczy krytycznego myslenia o zrodlach online. Gra ma miec realna mechanike, nie byc quizem.",
+    "specialty": "creative",
+    "criteria": [
+      "Nie jest quizem ani flashcard",
+      "Ma konkretna mechanike rozgrywki",
+      "Realnie trenuje source evaluation",
+      "Moze byc zaimplementowana"
+    ],
+    "author": "system",
+    "expected_answer_summary": "Investigation game with conflicting sources, credibility scoring, deception mechanics",
+    "created": "2026-07-18T00:00:00+00:00"
+  }
+}
