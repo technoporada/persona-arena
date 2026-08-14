@@ -407,7 +407,7 @@ if __name__ == "__main__":
     app.launch(
         server_name="0.0.0.0",
         server_port=port,
-        share=False,
+        share=True,
         inbrowser=True,
         theme=gr.themes.Soft(),
         css=".answer-box { min-height: 300px; } .vote-btn { min-width: 120px; }"
